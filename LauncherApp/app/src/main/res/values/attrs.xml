@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    皮肤级属性：深色主题与墨水屏主题各自给出一套取值，
+    布局与自绘控件统一通过 ?attr/... 取色，避免把配色写死在代码里。
+-->
+<resources>
+    <attr name="lpTextPrimary" format="color" />
+    <attr name="lpTextSecondary" format="color" />
+    <attr name="lpAccent" format="color" />
+    <attr name="lpDivider" format="color" />
+    <attr name="lpIconDim" format="color" />
+    <attr name="lpGearBg" format="reference" />
+    <attr name="lpHintBarBg" format="reference" />
+    <attr name="lpBadgeBg" format="reference" />
+    <attr name="lpHeaderBg" format="reference" />
+    <attr name="lpDraggingBg" format="reference" />
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    墨水屏不能用透明度/缩放/阴影来表达「正在拖动」（会留下灰阶残影），
+    改为给被拖动的图标套一个黑色实线方框。
+-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@android:color/transparent" />
+    <corners android:radius="6dp" />
+    <stroke
+        android:width="2dp"
+        android:color="@color/eink_border" />
+</shape>

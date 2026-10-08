@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 墨水屏标题栏与页面同为白底，只用一条底线分隔，避免大片色块刷新 -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/eink_bg" />
+        </shape>
+    </item>
+    <item android:gravity="bottom">
+        <shape android:shape="rectangle">
+            <size android:height="1.5dp" />
+            <solid android:color="@color/eink_border" />
+        </shape>
+    </item>
+</layer-list>

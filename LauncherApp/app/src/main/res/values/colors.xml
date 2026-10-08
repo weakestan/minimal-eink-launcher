@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 深色主题（默认） -->
+    <color name="wall_top">#FF17233A</color>
+    <color name="wall_bottom">#FF0B1220</color>
+    <color name="text_primary">#FFF2F5FA</color>
+    <color name="text_secondary">#FF9FB0C9</color>
+    <color name="accent">#FF7FB2FF</color>
+    <color name="icon_dim">#FF56657C</color>
+    <color name="battery_ok">#FF8FE38F</color>
+    <color name="battery_low">#FFFF7A7A</color>
+    <color name="panel_bg">#FF16213A</color>
+    <color name="card_bg">#1FFFFFFF</color>
+    <color name="badge_hide">#FFE2564B</color>
+    <color name="divider">#1FFFFFFF</color>
+
+    <!--
+        墨水屏主题：墨水屏只有灰阶，彩色会退化成中灰导致对比度骤降，
+        因此这里全部使用纯黑/纯白与少量深灰，保证刷新后笔画干净不发虚。
+    -->
+    <color name="eink_bg">#FFFFFFFF</color>
+    <color name="eink_text_primary">#FF000000</color>
+    <color name="eink_text_secondary">#FF444444</color>
+    <color name="eink_accent">#FF000000</color>
+    <color name="eink_icon_dim">#FFB0B0B0</color>
+    <color name="eink_divider">#FF000000</color>
+    <color name="eink_border">#FF000000</color>
+</resources>

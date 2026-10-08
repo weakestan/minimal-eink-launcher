@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ==================== 深色主题（默认） ==================== -->
+
+    <style name="Theme.Launcher" parent="@android:style/Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@drawable/bg_wallpaper</item>
+        <item name="android:colorAccent">@color/accent</item>
+        <item name="android:statusBarColor">#00000000</item>
+        <item name="android:navigationBarColor">#00000000</item>
+        <item name="android:windowShowWallpaper">false</item>
+
+        <item name="lpTextPrimary">@color/text_primary</item>
+        <item name="lpTextSecondary">@color/text_secondary</item>
+        <item name="lpAccent">@color/accent</item>
+        <item name="lpDivider">@color/divider</item>
+        <item name="lpIconDim">@color/icon_dim</item>
+        <item name="lpGearBg">@drawable/bg_gear</item>
+        <item name="lpHintBarBg">@drawable/bg_hint_bar</item>
+        <item name="lpBadgeBg">@drawable/bg_badge_hide</item>
+        <item name="lpHeaderBg">@drawable/bg_header_dark</item>
+        <item name="lpDraggingBg">@android:color/transparent</item>
+    </style>
+
+    <style name="Theme.Launcher.Settings" parent="@android:style/Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/wall_bottom</item>
+        <item name="android:colorAccent">@color/accent</item>
+        <item name="android:statusBarColor">@color/wall_top</item>
+
+        <item name="lpTextPrimary">@color/text_primary</item>
+        <item name="lpTextSecondary">@color/text_secondary</item>
+        <item name="lpAccent">@color/accent</item>
+        <item name="lpDivider">@color/divider</item>
+        <item name="lpIconDim">@color/icon_dim</item>
+        <item name="lpGearBg">@drawable/bg_gear</item>
+        <item name="lpHintBarBg">@drawable/bg_hint_bar</item>
+        <item name="lpBadgeBg">@drawable/bg_badge_hide</item>
+        <item name="lpHeaderBg">@drawable/bg_header_dark</item>
+        <item name="lpDraggingBg">@android:color/transparent</item>
+    </style>
+
+    <!-- ==================== 墨水屏主题 ====================
+         要点：
+         1. 白底黑字，取消所有半透明——灰阶下透明会变成麻点；
+         2. 阴影、渐变、缩放动画全部去掉，减少刷新与残影；
+         3. 页面切换不做淡入淡出（windowAnimationStyle=@null）。
+    -->
+
+    <style name="Theme.Launcher.Eink" parent="@android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/bg_wallpaper_eink</item>
+        <item name="android:colorAccent">@color/eink_accent</item>
+        <item name="android:statusBarColor">#00000000</item>
+        <item name="android:navigationBarColor">#FFFFFFFF</item>
+        <item name="android:windowShowWallpaper">false</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:textColorPrimary">@color/eink_text_primary</item>
+        <item name="android:textColorSecondary">@color/eink_text_secondary</item>
+        <item name="android:textColorHint">@color/eink_text_secondary</item>
+
+        <item name="lpTextPrimary">@color/eink_text_primary</item>
+        <item name="lpTextSecondary">@color/eink_text_secondary</item>
+        <item name="lpAccent">@color/eink_accent</item>
+        <item name="lpDivider">@color/eink_divider</item>
+        <item name="lpIconDim">@color/eink_icon_dim</item>
+        <item name="lpGearBg">@drawable/bg_gear_eink</item>
+        <item name="lpHintBarBg">@drawable/bg_hint_bar_eink</item>
+        <item name="lpBadgeBg">@drawable/bg_badge_hide_eink</item>
+        <item name="lpHeaderBg">@drawable/bg_header_eink</item>
+        <item name="lpDraggingBg">@drawable/bg_drag_eink</item>
+    </style>
+
+    <style name="Theme.Launcher.Settings.Eink" parent="@android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/bg_wallpaper_eink</item>
+        <item name="android:colorAccent">@color/eink_accent</item>
+        <item name="android:statusBarColor">#00000000</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:textColorPrimary">@color/eink_text_primary</item>
+        <item name="android:textColorSecondary">@color/eink_text_secondary</item>
+        <item name="android:textColorHint">@color/eink_text_secondary</item>
+
+        <item name="lpTextPrimary">@color/eink_text_primary</item>
+        <item name="lpTextSecondary">@color/eink_text_secondary</item>
+        <item name="lpAccent">@color/eink_accent</item>
+        <item name="lpDivider">@color/eink_divider</item>
+        <item name="lpIconDim">@color/eink_icon_dim</item>
+        <item name="lpGearBg">@drawable/bg_gear_eink</item>
+        <item name="lpHintBarBg">@drawable/bg_hint_bar_eink</item>
+        <item name="lpBadgeBg">@drawable/bg_badge_hide_eink</item>
+        <item name="lpHeaderBg">@drawable/bg_header_eink</item>
+        <item name="lpDraggingBg">@drawable/bg_drag_eink</item>
+    </style>
+
+</resources>

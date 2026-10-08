@@ -1,0 +1,59 @@
+plugins {
+    id 'com.android.application'
+}
+
+// 签名配置从 keystore.properties 读取（该文件不随源码分发）
+def keystorePropsFile = rootProject.file('keystore.properties')
+def keystoreProps = new Properties()
+if (keystorePropsFile.exists()) {
+    keystorePropsFile.withInputStream { keystoreProps.load(it) }
+}
+def hasSigning = keystorePropsFile.exists()
+        && keystoreProps['storePassword'] && keystoreProps['storePassword'] != 'CHANGE_ME'
+        && keystoreProps['keyAlias'] && keystoreProps['keyAlias'] != 'CHANGE_ME'
+
+android {
+    namespace 'com.stan.launcher'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.stan.launcher"
+        minSdk 21
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
+
+    signingConfigs {
+        release {
+            if (hasSigning) {
+                storeFile rootProject.file(keystoreProps['storeFile'])
+                storePassword keystoreProps['storePassword']
+                keyAlias keystoreProps['keyAlias']
+                keyPassword keystoreProps['keyPassword']
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            if (hasSigning) {
+                signingConfig signingConfigs.release
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    buildFeatures {
+        viewBinding false
+    }
+}
+
+// 纯系统框架 API，无第三方依赖
+dependencies {
+}

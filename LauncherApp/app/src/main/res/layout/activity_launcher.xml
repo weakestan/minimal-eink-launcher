@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/launcher_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--
+            顶部状态栏：仿系统状态栏，整条贴顶、无卡片背景、单行紧凑排布。
+            左侧：时间 + 日期；右侧：WiFi / 蓝牙 / 电量 / 设置。
+        -->
+        <LinearLayout
+            android:id="@+id/status_bar"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:background="@android:color/transparent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="12dp"
+            android:paddingEnd="2dp">
+
+            <TextView
+                android:id="@+id/time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="00:00"
+                android:textColor="?attr/lpTextPrimary"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/date_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:includeFontPadding="false"
+                android:text="1月1日 周一"
+                android:textColor="?attr/lpTextSecondary"
+                android:textSize="10sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <com.stan.launcher.WifiSignalView
+                android:id="@+id/wifi_view"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="10dp" />
+
+            <ImageView
+                android:id="@+id/bt_icon"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_bluetooth" />
+
+            <com.stan.launcher.BatteryView
+                android:id="@+id/battery_view"
+                android:layout_width="24dp"
+                android:layout_height="12dp" />
+
+            <TextView
+                android:id="@+id/battery_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="10dp"
+                android:includeFontPadding="false"
+                android:minWidth="28dp"
+                android:text="100%"
+                android:textColor="?attr/lpTextPrimary"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/app_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:paddingBottom="72dp"
+            android:scrollbars="none">
+
+            <com.stan.launcher.AppGridLayout
+                android:id="@+id/app_grid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="8dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="8dp" />
+        </ScrollView>
+    </LinearLayout>
+
+    <!--
+        设置入口：系统状态栏区域（顶部约 26dp）被系统手势占用、收不到点击，
+        因此按钮放在状态栏正下方右侧，正常可点。
+    -->
+    <ImageView
+        android:id="@+id/settings_btn"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="8dp"
+        android:background="?attr/lpGearBg"
+        android:contentDescription="@string/settings_title"
+        android:padding="7dp"
+        android:src="@drawable/ic_settings" />
+
+    <!-- 编辑模式提示条 -->
+    <LinearLayout
+        android:id="@+id/hint_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="14dp"
+        android:background="?attr/lpHintBarBg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="8dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/edit_mode_hint"
+            android:textColor="?attr/lpTextSecondary"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/done_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:gravity="center"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:text="@string/done"
+            android:textColor="?attr/lpAccent"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</FrameLayout>

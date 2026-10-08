@@ -1,0 +1,33 @@
+# ===== 构建产物 / 缓存 =====
+.gradle/
+build/
+.cxx/
+.externalNativeBuild/
+captures/
+
+# ===== 本地配置与签名密钥（切勿提交）=====
+local.properties
+keystore.properties
+keystore.properties.txt
+*.jks
+*.keystore
+*.p12
+*.pepk
+
+# ===== IDE / 系统 =====
+.idea/
+*.iml
+.DS_Store
+Thumbs.db
+
+# ===== 安装包与编译中间件 =====
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+
+# ===== 调试日志 / 临时文件 =====
+.dev/
+t*.txt
+top*.txt

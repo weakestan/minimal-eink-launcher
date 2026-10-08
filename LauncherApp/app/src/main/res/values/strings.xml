@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">极简桌面</string>
+    <string name="settings_title">桌面设置</string>
+    <string name="edit_mode_hint">拖动图标可自由摆放位置（可留空位），点击左上角 × 隐藏应用</string>
+    <string name="done">完成</string>
+    <string name="master_title">全部应用</string>
+    <string name="master_desc_on">当前显示全部应用，点击可全部隐藏</string>
+    <string name="master_desc_part">已隐藏部分应用，点击可全部显示</string>
+    <string name="master_desc_off">当前已隐藏全部应用，点击可全部显示</string>
+    <string name="hide_all_done">已隐藏全部应用</string>
+    <string name="show_all_done">已恢复显示全部应用</string>
+    <string name="app_section">应用显示与顺序</string>
+    <string name="app_section_desc">点击整行可显示或隐藏该应用；长按桌面图标并拖动可自由摆放位置，留出的空位会保留</string>
+    <string name="reset_order">恢复默认排列</string>
+    <string name="reset_done">已恢复默认排列</string>
+    <string name="default_home_title">设为默认桌面</string>
+    <string name="default_home_desc_off">点击前往系统「默认应用-桌面」设置（华为中国区机型会拒绝第三方桌面）</string>
+    <string name="default_home_desc_on">当前已是系统默认桌面</string>
+    <string name="default_home_action">去设置</string>
+    <string name="default_home_action_done">已完成</string>
+    <string name="default_home_unavailable">当前系统未提供默认桌面设置入口，请在「设置-应用-默认应用」中手动选择</string>
+    <string name="home_key_title">回到桌面时进入极简桌面</string>
+    <string name="home_key_desc_off">华为中国区系统禁止第三方桌面当默认桌面，开启无障碍服务即可接管桌面</string>
+    <string name="home_key_desc_on">已接管：手势上滑、Home 键回到桌面都会进入极简桌面</string>
+    <string name="home_key_action">去开启</string>
+    <string name="home_key_action_done">已开启</string>
+    <string name="home_key_unavailable">未找到无障碍设置入口，请手动在「设置-辅助功能-无障碍」中开启</string>
+    <string name="home_key_service_desc">开启后，无论用手势上滑还是 Home 键回到桌面，都会直接进入极简桌面。只监听「桌面是否被打开」，不读取屏幕内容。</string>
+    <string name="home_key_service_label">极简桌面桌面接管</string>
+    <string name="about_section">关于</string>
+    <string name="about_text">极简桌面 · 只显示你需要的应用\n长按任意图标进入编辑模式</string>
+    <string name="hidden_tag">已隐藏</string>
+    <string name="eink_title">墨水屏模式</string>
+    <string name="eink_desc_off">当前为深色配色，墨水屏下偏黑、易留残影，建议开启</string>
+    <string name="eink_desc_on">已开启：白底黑字、去掉透明度与阴影，并降低刷新频率</string>
+    <string name="eink_desc_auto">已自动识别墨水屏设备并开启：白底黑字、去掉透明度与阴影</string>
+</resources>
